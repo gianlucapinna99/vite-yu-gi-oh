@@ -24,7 +24,6 @@ export default {
 </template>
 
 
-
 <style lang="scss" scoped>
 .container-bg {
     background-color: #d48f38;
