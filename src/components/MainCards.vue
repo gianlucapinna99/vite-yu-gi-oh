@@ -19,7 +19,7 @@ export default {
         <div class="row">
             <div v-for="(card, index) in store.cards" class="col-3">
                 <template v-if="index < 100">
-                    <Card :img="card.card_images[0].image_url" :name="card.name" :type="card.type"></Card>
+                    <Card :img="card.card_images[0].image_url" :name="card.name" :type="card.archetype"></Card>
                 </template>
             </div>
         </div>
