@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "CardElement",
+    name: "Card",
     props: {
         img: String,
         name: String,
@@ -11,7 +11,7 @@ export default {
 
 <template>
     <article>
-        <img :src="img" :alt="CardName">
+        <img :src="img" :alt="name">
         <h2>{{ name.toUpperCase() }}</h2>
         <h3>{{ archetype }}</h3>
     </article>
@@ -24,24 +24,25 @@ article {
     background-color: #d48f38;
     text-align: center;
     margin-bottom: 30px;
-}
 
-img {
-    width: 100%;
-}
+    img {
+        width: 100%;
+    }
 
-h2,
-h3 {
-    padding: 10px;
-}
+    h2,
+    h3 {
+        padding: 10px;
+    }
 
-h2 {
-    color: white;
-    font-size: 20px;
+    h2 {
+        color: white;
+        font-size: 20px;
 
-}
+    }
 
-h3 {
-    font-size: 17px;
+    h3 {
+        font-size: 17px;
+    }
+
 }
 </style>
