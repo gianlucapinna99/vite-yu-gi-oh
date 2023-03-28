@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-    <article>
+    <article class="h-100">
         <img :src="img" :alt="name">
         <h2>{{ name.toUpperCase() }}</h2>
         <h3>{{ archetype }}</h3>
@@ -23,7 +23,6 @@ export default {
 article {
     background-color: #d48f38;
     text-align: center;
-    margin-bottom: 30px;
 
     img {
         width: 100%;
