@@ -1,10 +1,8 @@
 <script>
-import MainHeader from './MainHeader.vue';
 import MainCards from './MainCards.vue';
 export default {
     name: "AppMain",
     components: {
-        MainHeader,
         MainCards
     },
 }
@@ -14,11 +12,8 @@ export default {
     <div class="container-bg">
         <div class="container">
             <div class="d-flex flex-column">
-                <MainHeader></MainHeader>
                 <MainCards></MainCards>
             </div>
-
-
         </div>
     </div>
 </template>

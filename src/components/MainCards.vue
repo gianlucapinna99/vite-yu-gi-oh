@@ -1,11 +1,13 @@
 <script>
 import Card from './Card.vue';
 import { store } from '../store';
+import MainHeader from './MainHeader.vue';
 
 export default {
     name: "MainCards",
     components: {
-        Card
+        Card,
+        MainHeader
     },
     data() {
         return {
@@ -35,12 +37,13 @@ export default {
 <template>
     <div class="col-12">
         <div class="row">
-            <div class="col-12 mb-3">
+            <div class="col-12 mb-3 mt-3">
                 <select id="archetype-select" v-model="selectedArchetype">
-                    <option value="">Mostra tutte le carte</option>
+                    <option value="">Seleziona archetipo</option>
                     <option v-for="archetype in archetypes" :key="archetype" :value="archetype">{{ archetype }}</option>
                 </select>
             </div>
+            <MainHeader class="main-header"></MainHeader>
             <div v-for="(card, index) in filteredCards" class="col-3 mb-3">
                 <template v-if="index < 100">
                     <Card :img="card.card_images[0].image_url" :name="card.name" :archetype="card.archetype">
@@ -52,4 +55,9 @@ export default {
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.main-header {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+</style>
